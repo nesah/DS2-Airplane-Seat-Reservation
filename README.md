@@ -1,7 +1,5 @@
 # DS2-Airplane-Seat-Reservation
 
-## Contents
-
 ## About
 This web application is a requirement for the course Discrete Structures 2.
 Created using Python and Flask.
