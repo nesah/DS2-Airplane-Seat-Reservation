@@ -26,7 +26,7 @@ Created using Python and Flask.
 ## Notes
 
 ## `TODO`
-[] **IN app.py** - read comments in line 113 to 117
-[] **IN flights_layout.html** - when user change flight schedule, 
+[ ] **IN app.py** - read comments in line 113 to 117
+[ ] **IN flights_layout.html** - when user change flight schedule, 
 colors of available chairs should change (list of available chairs is in app.py a, b, c, d, e)
-[] Logo for icons and navbar
+[ ] Logo for icons and navbar
