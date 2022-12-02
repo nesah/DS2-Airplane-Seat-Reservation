@@ -1,0 +1,42 @@
+button:hover{
+    background-color: #737373;
+}
+
+button{
+	border: none;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+a:visited{
+	text-decoration: none;
+}
+
+.css-selector{
+	font-family: 'Archivo Black', sans-serif;
+	font-family: 'League Spartan', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.nav_bar{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 1280px;
+	height: 60px;
+	background: #dadada;
+	background-blend-mode: normal;
+}
+
+.bar_fli{
+	position: absolute;
+	left: 300px;
+	top: 15px;
+	width: 294px;
+	height: 30px;
+	font-family: Archivo Black;
+	font-size: 20px;
+	color:#737373;
+}

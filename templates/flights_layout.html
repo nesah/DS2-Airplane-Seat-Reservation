@@ -1,0 +1,99 @@
+<!-- Extend template -->
+{% extends "main_layout.html" %}
+
+<!-- Head -->
+{% block head %}
+    <link href="../static/flights_style.css" rel="stylesheet">
+{% endblock head %}
+
+<!-- Title -->
+{% block title %}
+    Flights
+{% endblock title %}
+
+<!-- Body -->
+{% block content %}
+
+    <!-- Website Info and Drop Down Title -->
+    <div class="div_info">
+        <img class="info_icon" src="../static/airplane_icon.png">
+        <p class="info_titl">Flight Details</p>
+        <div class="div_head">
+            <p class="head_date">Date</p>
+            <p class="head_depa">Departure/Arrival</p>
+            <p class="head_dest">Destination</p>
+            <p class="head_airc">Aircraft</p>
+        </div>
+    </div>
+
+    <!-- List of Flights and Information -->
+    <form method="POST">
+        <div class="div_choi">
+            <select class="choi_text" name="flight_list">
+                {% for d in flights_schedules %}
+                    <option value="{{d[4]}}">
+                        <p>{{d[0]}}</p>
+                        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{d[1]}}</p>
+                        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{d[2]}}</p>
+                        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{d[3]}}</p>
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <button class="btn_buy" type="submit">Buy a seat</button>
+    </form>
+
+    <!-- Seats Info -->
+    <div class="div_seat">
+        <p class="seat_titl">Seats View</p>
+        <div class="box_free"></div>
+        <p class="det_free">Free</p>
+        <div class="box_occu"></div>
+        <p class="det_occu">Occupied</p>
+    </div>
+
+    <!-- Types of Seats -->
+    <div class="div_clas">
+        <p class="clas_firs">First Class</p>
+        <p class="clas_econ">Economy Class </p>
+    </div>
+
+    <!-- Chairs Row Label -->
+    <div class="div_rows">
+        <p>A</p>
+        <p>B</p>
+        <p>C</p>
+        <div class="div_dist"></div>
+        <p>D</p>
+        <p>E</p>
+        <p>F</p>
+    </div>
+
+    <!-- Chairs Column Label -->
+    <div class="div_colu">
+        <p>
+            1&emsp;&emsp;&emsp;&emsp;2&emsp;&emsp;&emsp;&emsp;3
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;4
+            &emsp;&emsp;&emsp;&emsp;5&emsp;&emsp;&emsp;&emsp;6
+            &emsp;&emsp;&emsp;7&emsp;&emsp;&emsp;&emsp;&emsp;8 
+            &emsp;&emsp;&emsp;&emsp;9&emsp;&emsp;&emsp;10
+        </p>
+    </div>
+
+    <!-- Chairs -->
+    <div class="div_chai">
+        {% for i in range(6) %}
+                {% if i == 3 %}
+                    <div class="div_spac"></div>
+                {% endif%}
+                {% for j in range(11) %}
+                    {% if j == 3 %}
+                        <div class="chai_box"></div>
+                    {% else %}
+                        <div class="chai_box bg_gray"></div>
+                    {% endif%}
+                {% endfor %}
+        {% endfor %}
+    </div>
+
+{% endblock content %}

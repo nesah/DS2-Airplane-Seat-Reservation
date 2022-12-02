@@ -1,0 +1,287 @@
+.div_info{
+    position: absolute;
+    left: 34px;
+    top: 80px;
+    width: 1200px;
+    height: 232px;
+} 
+
+.info_icon{
+    position: absolute;
+    left: -10px;
+    top: 0px;
+    width: 337px;
+    height: 146.25px;
+}
+
+.info_titl{
+    position: absolute;
+    left: 315px;
+    top: -50px;
+    width: 308px;
+    height: 58px;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    font-family: Archivo Black; 
+    color: #004aad;
+}
+
+.div_head{
+    position: absolute;
+    left: 340px;
+    top: 50px;
+    width: 905px;
+    height: 40px;
+    background-blend-mode: normal;
+    background: #dadada;
+}
+
+.head_date{
+    position: absolute;
+    left: 30px;
+    top: -20px;
+    width: 176px;
+    height: 43.8px; 
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: League Spartan;
+    color: black;
+}
+
+.head_depa{
+    position: absolute;
+    left: 210px;
+    top: -20px;
+    width: 176px;
+    height: 43.8px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: League Spartan;
+    color: black;
+}
+
+.head_dest{
+    position: absolute;
+    left: 470px;
+    top: -20px;
+    width: 176px;
+    height: 43.8px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: League Spartan;
+    color: black;
+}
+
+.head_airc{
+    position: absolute;
+    left: 720px;
+    top: -20px;
+    width: 176px;
+    height: 43.8px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: League Spartan;
+    color: black;
+}
+
+.div_choi{
+    position: absolute;
+    top: 180px;
+    left: 375px;
+}
+
+.choi_text{
+    height: 35px;
+    width: 905px;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: expanded;
+    font-family: League Spartan;
+    color: #737373;
+}
+
+.div_seat{
+    position: absolute;
+    left: 40px;
+    top: 280px;
+    width: 194px;
+    height: 146px;
+}
+
+.seat_titl{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 29px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Archivo Black; 
+    color: black;
+}
+ 
+.box_free{
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    width: 50px;
+    height: 20px;
+    background-blend-mode: normal;
+    background-color: #dadada;
+}
+
+.det_free{
+    position: absolute;
+    left: 70px;
+    top: 50px;
+    width: 39px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: League Spartan;
+    color: black;
+}
+  
+.box_occu{
+    position: absolute;
+    left: 0px;
+    top: 120px;
+    width: 50px;
+    height: 20px;
+    background-blend-mode: normal;
+    background-color: #004aad;
+}
+  
+.det_occu{
+    position: absolute;
+    left: 70px;
+    top: 105px;
+    width: 85px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: League Spartan;
+    color: black;
+}
+
+.div_clas{
+    position: absolute;
+    left: 340px;
+    top: 220px;
+    width: 300px;
+    height: 29px;
+}
+  
+.clas_firs{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 29px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Archivo Black; 
+    color: black;
+}
+  
+.clas_econ{
+    position: absolute;
+    left: 395px;
+    top: 0px;
+    width: 250px;
+    height: 29px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Archivo Black; 
+    color: black;
+}
+
+.div_rows{
+    position: absolute;
+    left: 270px;
+    top: 270px;
+    width: 18px;
+    height: 200px;
+    font-size: 15px;
+    font-weight: 700;  
+    margin-bottom: 1px;  
+    font-family: Archivo Black; 
+    color: black;
+}
+
+.div_dist{
+    height: 15px; 
+    width: 200px;
+}
+
+.div_colu{
+    position: absolute;
+    left: 330px;
+    top: 505px;
+    height: 15px;
+    width: 800px;
+    font-size: 15px;
+    font-weight: 700;  
+    font-family: Archivo Black; 
+    color: black;
+}
+
+.div_chai{
+    position: absolute;
+    left: 300px;
+    top: 280px;
+    width: 800px;
+    height: 225px;
+}
+
+.div_spac{
+    height: 130px; 
+    width: 200px;
+}
+
+.chai_box{
+    float: left;
+    padding: 10px; 
+    margin-right: 10px; 
+    margin-bottom: 10px;
+    width: 40px; 
+    height: 5px;
+}
+
+.bg_gray{
+    background-color: #dadada;
+}
+
+.btn_buy{
+    position: absolute;
+    left: 1090px;
+    top: 445px;
+    width: 173px;
+    height: 52px;  
+    font-size: 15px;
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+    font-weight: bolder;
+    background-color: #004aad;
+    color: white;
+}
+
+.btn_txt{
+    width: 173px;
+    height: 52px;  
+    color: white;
+}

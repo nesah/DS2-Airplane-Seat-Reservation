@@ -1,0 +1,61 @@
+<!-- Extend template -->
+{% extends "main_layout.html" %}
+
+<!-- Head -->
+{% block head %}
+    <link href="../static/seats_layout.css" rel="stylesheet">
+{% endblock head %}
+
+<!-- Title -->
+{% block title %}
+    Seats
+{% endblock title %}
+
+<!-- Body -->
+{% block content %}
+
+    <!-- Flash Display -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div id="div_flash">
+                    <p id="mess_flash">{{message}}</p>
+                </div>                
+                <button id="btn_flash" class="btn_flash" onclick="removeDivFlash()">x</button>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <!-- Title -->
+    <div class="div_pers">
+        <p class="pers_titl">Personal Details</p>
+        <div class="pers_line"></div>        
+    </div>
+
+    <!-- Form Fields-->
+    <form class="form_deta" method="POST">
+        <p class="txt_lname">Last Name</p>
+        <input class="box_lname" type="text">
+        <p class="txt_fname">First Name</p>
+        <input class="box_fname" type="text">
+        <p class="txt_mname">Middle Name</p>
+        <input class="box_mname" type="text">
+        <p class="txt_cont">Contact Number</p>
+        <input class="box_cont" type="text">
+        <p class="txt_emai">Email Address</p>
+        <input class="box_emai" type="text">
+        <p class="txt_home">Home Address</p>
+        <input class="box_home" type="text">
+        <p class="txt_sele">Seat Number</p>
+        <select class="box_sele" name="seat_choosen">       
+            {% for d in seats_list %}
+                <option value="{{d}}">{{d}}</option>
+            {% endfor %}
+        </select> 
+        <button class="btn_conf" type="submit">Confirm</button>
+    </form>
+
+    <!-- Add Javascript -->
+    <script src="../static/seats_function.js"></script>
+
+{% endblock content %}

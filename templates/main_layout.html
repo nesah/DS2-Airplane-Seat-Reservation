@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Add Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">         
+        
+        <!-- Add Css -->
+        <link href="../static/main_style.css" rel="stylesheet">
+
+        <!-- Head for Sub Files -->
+        {% block head %}{% endblock head %}
+
+        <!-- Title for Sub Files -->
+        <title>{% block title %}{% endblock title %}</title>
+
+    </head>
+
+    <body>     
+
+        <!-- Navigation Bar -->
+        <div class="nav_bar">
+            <a class="bar_fli" href="/">Flights</a>
+        </div>
+
+        <!-- Body for Sub Files -->
+        {% block content %}{% endblock content %}
+        
+    </body>
+    
+</html>
