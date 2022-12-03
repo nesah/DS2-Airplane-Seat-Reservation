@@ -83,15 +83,10 @@ def index():
     if request.method == "POST":
 
         # Get selected flight
-        sel = str(request.form.get("flight_list"))
-        
-        # Save selected flight index in file
-        fil = open("selected.txt", "w")
-        fil.write(sel)
-        fil.close()
+        sel = request.form.get("flight_list")
 
         # Redirect to seats page
-        return redirect("/seats")
+        return redirect(url_for("seats", sel=sel))
 
     # Render page and send flights schedules list
     return render_template("flights_layout.html", flights_schedules=flights_schedules)
@@ -100,9 +95,8 @@ def index():
 @app.route("/seats", methods=["GET", "POST"])
 def seats():
 
-    # Get selected flight from file
-    fil = open("selected.txt", "r")
-    x = str(fil.readline())
+    # Get selected flight
+    sel = int(request.args.get("sel", None))
 
     # If button is clicked
     if request.method == "POST":
@@ -114,46 +108,54 @@ def seats():
         # GET ALL TYPED INPUT FROM seats_layout.html AND CHECK IF INPUT IS BLANK OR TOO SHORT
         # IF INPUT IS BLANK OR TOO SHORT (ADD MORE CONSTAINTS) DISPLAY FLASH
         # TO DISPLAY FLASH, INSERT THIS CODE flash("Details cannot be blank!") (CHANGE TEXT FOR OTHER ERRORS)
-        # AS LONG AS THERE IS PROBLEM FROM INPUT PREVENT CODE FROM EXECUTING LINE 119 - 137
+        # AS LONG AS THERE IS PROBLEM FROM INPUT PREVENT CODE FROM EXECUTING LINE 113 - 131
 
-        if x == "1":
+        if sel == 1:
             a.remove(choosen)
         
-        if x == "2":
+        if sel == 2:
             b.remove(choosen)
         
-        if x == "3":
+        if sel == 3:
             c.remove(choosen)
         
-        if x == "4":
+        if sel == 4:
             d.remove(choosen)
         
-        if x == "5":
+        if sel == 5:
             e.remove(choosen)
 
-        if x == "6":
+        if sel == 6:
             f.remove(choosen)
 
         return redirect("/")
 
     # Send seat list depending on flight schedule selected
-    if x == "1":
+    if sel == 1:
         seats_list = a
     
-    if x == "2":
+    if sel == 2:
         seats_list = b
 
-    if x == "3":
+    if sel == 3:
         seats_list = c
     
-    if x == "4":
+    if sel == 4:
         seats_list = d
 
-    if x == "5":
+    if sel == 5:
         seats_list = e
     
-    if x == "6":
+    if sel == 6:
         seats_list = f
 
+    # Get flight schedule details
+    flig_sche = ""
+    for f in flights_schedules[int(sel)-1]:
+        flig_sche = flig_sche + " " + f
+
+    # Remove last element in details
+    flig_sche = flig_sche[0:-1]
+
     # Render page and send seat list
-    return render_template("seats_layout.html", seats_list=seats_list)
+    return render_template("seats_layout.html", seats_list=seats_list, flig_sche=flig_sche)
