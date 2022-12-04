@@ -103,22 +103,13 @@ def seats():
 
         # Get selected seat
         choosen = str(request.form.get("seat_choosen"))
-
-        # CODE HERE
-        # GET ALL TYPED INPUT FROM seats_layout.html AND CHECK IF INPUT IS BLANK OR TOO SHORT
-        # IF INPUT IS BLANK OR TOO SHORT (ADD MORE CONSTAINTS) DISPLAY FLASH
-        # TO DISPLAY FLASH, INSERT THIS CODE flash("Details cannot be blank!") (CHANGE TEXT FOR OTHER ERRORS)
-        # AS LONG AS THERE IS PROBLEM FROM INPUT PREVENT CODE FROM EXECUTING LINE 113 - 131
-        # ---------------
         last_name = str(request.form.get("lname_text"))
         first_name = str(request.form.get("fname_text"))
         middle_name = str(request.form.get("mname_text"))
         cont_num = str(request.form.get("contact_text"))
         email_add = str(request.form.get("email_text"))
         
-        # Checking text fields
-        #check = 1
-        #while(check == 1):
+        # Checking form fields
         if bool(last_name) != False:
 
             if bool(first_name) != False:
