@@ -109,9 +109,6 @@ def seats():
         # IF INPUT IS BLANK OR TOO SHORT (ADD MORE CONSTAINTS) DISPLAY FLASH
         # TO DISPLAY FLASH, INSERT THIS CODE flash("Details cannot be blank!") (CHANGE TEXT FOR OTHER ERRORS)
         # AS LONG AS THERE IS PROBLEM FROM INPUT PREVENT CODE FROM EXECUTING LINE 113 - 131
-        # 12.5 edit here -shane
-        last_name = str(request.form.get("text"))
-        print(last_name)
 
         if sel == 1:
             a.remove(choosen)

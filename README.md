@@ -24,7 +24,9 @@ Created using Python and Flask.
 ## Notes
 
 ## `TODO`
-- [ ] **IN app.py** - read comments in line 113 to 117
+- [x] **IN app.py** - read comments in line 113 to 117
+- [ ] counter of seats
+- [ ] check if seat chose has already been chosen
 - [ ] **IN flights_layout.html** - when user change flight schedule, 
 colors of available chairs should change (list of available chairs is in app.py a, b, c, d, e)
 - [ ] Logo for icons and navbar
