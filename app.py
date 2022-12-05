@@ -117,8 +117,6 @@ def seats():
         email_add = str(request.form.get("email_text"))
         
         # Checking text fields
-        #check = 1
-        #while(check == 1):
         if bool(last_name) != False:
 
             if bool(first_name) != False:
