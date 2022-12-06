@@ -35,15 +35,15 @@
     <!-- Form Fields-->
     <form class="form_deta" method="POST">
         <p class="txt_lname">Last Name</p>
-        <input class="box_lname" name="lname_text">
+        <input class="box_lname" name="lname_text"required>
         <p class="txt_fname">First Name</p>
-        <input class="box_fname" name="fname_text">
+        <input class="box_fname" name="fname_text"required>
         <p class="txt_mname">Middle Name</p>
-        <input class="box_mname" name="mname_text">
+        <input class="box_mname" name="mname_text" required>
         <p class="txt_cont">Contact Number</p>
-        <input class="box_cont" name="contact_text">
-        <p class="txt_emai">Email Address</p>
-        <input class="box_emai" name="email_text">
+        <input class="box_cont" name="contact_text" input type="number" required>
+        <p class="txt_emai"  >Email Address</p>
+        <input class="box_emai" name="email_text" input type="email"required>
         <p class="txt_flig">Flight Details</p>
         <input class="box_flig" type="text" readonly value="{{flig_sche}}">
         <p class="txt_sele">Seat Number</p>
