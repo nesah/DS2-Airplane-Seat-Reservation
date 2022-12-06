@@ -1,12 +1,35 @@
 # Import libraries
 from flask import Flask, request, render_template, redirect, flash, url_for, session
 import jinja2
-
+from flask_sqlalchemy import SQLAlchemy
 # Setup jinja
 jinja = jinja2.Environment(loader=jinja2.FileSystemLoader("template"))
 
 # Make app
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config['SECRET_KEY'] = '72882373811'
+
+#Initializing database
+db = SQLAlchemy(app)
+
+#Creating Model
+class Users (db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(25))
+    middle_name = db.Column(db.String(25))
+    last_name = db.Column(db.String(25))
+    email = db.Column(db.String(100), unique=True)
+    contact_number= db.Column(db.Integer)
+    
+    def __init__(self, first_name, middle_name, last_name, email, contact_number):
+        self.first_name = first_name
+        self.middle_name = middle_name
+        self.last_name = last_name
+        self.email = email 
+        self.contact_number = contact_number
+
 
 # Create secret key for flash messages
 app.secret_key = "72882373811"
@@ -194,3 +217,8 @@ def seats():
 
     # Render page and send seat list
     return render_template("seats_layout.html", seats_list=seats_list, flig_sche=flig_sche)
+
+
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
