@@ -29,3 +29,4 @@ Created using Python and Flask.
 - [ ] **IN flights_layout.html** - when user change flight schedule, 
 colors of available chairs should change (list of available chairs is in app.py a, b, c, d, e)
 - [ ] Logo for icons and navbar
+- [ ] Fix a bug where returns error for the last schedule
