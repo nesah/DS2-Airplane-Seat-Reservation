@@ -176,6 +176,29 @@
     font-family: League Spartan;
     color: black;
 }
+.seat_count{
+    position: absolute;
+    left: 0px;
+    top: 155px;
+    width: 85px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: League Spartan;
+    color: black;
+}
+
+.seat_text{
+    position: absolute;
+    left: 70px;
+    top: 155px;
+    width: 85px;
+    height: 22px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: League Spartan;
+    color: black;
+}
 
 .div_clas{
     position: absolute;

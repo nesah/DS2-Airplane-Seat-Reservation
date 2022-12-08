@@ -111,8 +111,11 @@ def index():
         # Redirect to seats page
         return redirect(url_for("seats", sel=sel))
 
+
     # Render page and send flights schedules list
-    return render_template("flights_layout.html", flights_schedules=flights_schedules)
+    
+    
+    return render_template("flights_layout.html", flights_schedules=flights_schedules, seats_avail=len(a))
 
 # Route for seats_layout.html
 @app.route("/seats", methods=["GET", "POST"])
