@@ -35,15 +35,15 @@
     <!-- Form Fields-->
     <form class="form_deta" method="POST">
         <p class="txt_lname">Last Name</p>
-        <input class="box_lname" name="lname_text"required>
+        <input class="box_lname" name="lname_text" type="text" autocomplete="off">
         <p class="txt_fname">First Name</p>
-        <input class="box_fname" name="fname_text"required>
+        <input class="box_fname" name="fname_text" type="text" autocomplete="off">
         <p class="txt_mname">Middle Name</p>
-        <input class="box_mname" name="mname_text" required>
+        <input class="box_mname" name="mname_text" type="text" autocomplete="off">
         <p class="txt_cont">Contact Number</p>
-        <input class="box_cont" name="contact_text" input type="number" required>
-        <p class="txt_emai"  >Email Address</p>
-        <input class="box_emai" name="email_text" input type="email"required>
+        <input class="box_cont" name="contact_text" type="text" autocomplete="off">
+        <p class="txt_emai">Email Address</p>
+        <input class="box_emai" name="email_text" type="text" autocomplete="off">
         <p class="txt_flig">Flight Details</p>
         <input class="box_flig" type="text" readonly value="{{flig_sche}}">
         <p class="txt_sele">Seat Number</p>
@@ -56,6 +56,24 @@
     </form>
 
     <!-- Add Javascript -->
-    <script src="../static/seats_function.js"></script>
+    <script>
+
+        // Remove flash from screen
+        function removeDivFlash(){
+
+            // Create variable for div of flash
+            const div = document.getElementById("div_flash");
+
+            // Create variable for button in flash
+            const btn = document.getElementById("btn_flash")
+
+            // Remove div
+            div.remove();
+
+            // Remove button
+            btn.remove();
+        }
+
+    </script>
 
 {% endblock content %}
