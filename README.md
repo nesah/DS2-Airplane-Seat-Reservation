@@ -2,9 +2,10 @@
 
 ## About
 This web application is a requirement for the course Discrete Structures 2.
-Created using Python and Flask.
+Created using HTML, CSS, JavaScript, Python, and Flask Framework.
 
-*Short description abt how this works*
+## Description
+---------------------
 
 ## Members
 - Bernales, Shan Sai - [saiss-cpu](https://github.com/saiss-cpu)
@@ -15,18 +16,7 @@ Created using Python and Flask.
 - Rivera, Trica -  [triciamaerivera](https://github.com/triciamaerivera)
 
 ## References
-- Flask
-  https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application
-
 - Python3
   https://www.python.org/
-
-## Notes
-
-## `TODO`
-- [x] **IN app.py** - read comments in line 113 to 117
-- [x] check if seat chose has already been chosen
-- [x] **IN flights_layout.html** - when user change flight schedule, 
-colors of available chairs should change (list of available chairs is in app.py a, b, c, d, e, f)
-- [ ] Logo for icons and navbar
-- [x] Fix a bug where returns error for the last schedule
+- Flask
+https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application
