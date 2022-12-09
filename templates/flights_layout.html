@@ -50,8 +50,6 @@
         <p class="det_free">Free</p>
         <div class="box_occu"></div>
         <p class="det_occu">Occupied</p>
-        <p class = "seat_count">{{seats_avail}}</p>
-        <p class = "seat_text">Seats Counter</p>
     </div>
 
     <!-- Types of Seats -->
@@ -93,7 +91,7 @@
                     {% if j == 3 %}
                         <div class="chai_box"></div>
                     {% else %}
-                         <div class="chai_box" id="{{seat_id[ind.value]}}"></div>
+                        <div class="chai_box" id="{{seat_id[ind.value]}}"></div>
                         {% set ind.value = ind.value + 1 %}
                     {% endif%}
                 {% endfor %}
