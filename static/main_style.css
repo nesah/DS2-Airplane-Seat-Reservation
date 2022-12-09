@@ -14,6 +14,10 @@ a:visited{
 	text-decoration: none;
 }
 
+a:hover{
+	color: #004aad;
+}
+
 .css-selector{
 	font-family: 'Archivo Black', sans-serif;
 	font-family: 'League Spartan', sans-serif;
@@ -28,6 +32,13 @@ a:visited{
 	height: 60px;
 	background: #dadada;
 	background-blend-mode: normal;
+}
+
+.full_logo{
+	position: absolute;
+	left: 30px;
+	top: 12px;
+	width: 200px;
 }
 
 .bar_fli{
