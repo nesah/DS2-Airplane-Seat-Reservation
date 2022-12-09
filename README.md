@@ -26,7 +26,7 @@ Created using Python and Flask.
 ## `TODO`
 - [x] **IN app.py** - read comments in line 113 to 117
 - [x] check if seat chose has already been chosen
-- [ ] **IN flights_layout.html** - when user change flight schedule, 
-colors of available chairs should change (list of available chairs is in app.py a, b, c, d, e)
+- [x] **IN flights_layout.html** - when user change flight schedule, 
+colors of available chairs should change (list of available chairs is in app.py a, b, c, d, e, f)
 - [ ] Logo for icons and navbar
-- [ ] Fix a bug where returns error for the last schedule
+- [x] Fix a bug where returns error for the last schedule
