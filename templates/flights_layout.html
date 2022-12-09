@@ -29,7 +29,7 @@
     <!-- List of Flights and Information -->
     <form method="POST">
         <div class="div_choi">
-            <select class="choi_text" name="flight_list">
+            <select class="choi_text" name="flight_list" id="selfli" onchange="changeChoice(this)">
                 {% for d in flights_schedules %}
                     <option value="{{d[4]}}">
                         <p>{{d[0]}}</p>
@@ -84,6 +84,7 @@
 
     <!-- Chairs -->
     <div class="div_chai">
+        {% set ind = namespace(value=0) %}
         {% for i in range(6) %}
                 {% if i == 3 %}
                     <div class="div_spac"></div>
@@ -92,10 +93,189 @@
                     {% if j == 3 %}
                         <div class="chai_box"></div>
                     {% else %}
-                        <div class="chai_box bg_gray"></div>
+                         <div class="chai_box" id="{{seat_id[ind.value]}}"></div>
+                        {% set ind.value = ind.value + 1 %}
                     {% endif%}
                 {% endfor %}
         {% endfor %}
     </div>
+
+    <!-- Add Javascript -->
+    <script>
+
+        // Get id of all seats
+        var all = JSON.parse('{{seat_id|tojson|safe}}');
+
+        // Get id of all available seats per flight
+        var a_seats = JSON.parse('{{a|tojson|safe}}');
+        var b_seats = JSON.parse('{{b|tojson|safe}}');
+        var c_seats = JSON.parse('{{c|tojson|safe}}');
+        var d_seats = JSON.parse('{{d|tojson|safe}}');
+        var e_seats = JSON.parse('{{e|tojson|safe}}');
+        var f_seats = JSON.parse('{{f|tojson|safe}}');
+
+        // Create variable for specific id to change color and index for accessing seats
+        var seat_id;
+        var ind;
+
+        // Create variable to get selected option
+        var ind_sel;
+
+        // Make all seats color to blue
+        function setBlue(){
+
+            // Set index to zero
+            ind = 0;
+
+            // Iterate for all seats
+            while(all[ind]){
+                
+                // Get html element
+                seat_id = document.getElementById(String(all[ind]));
+
+                // Set color to blue
+                seat_id.style.backgroundColor = "#004aad";
+
+                // Increment index
+                ind++;
+            }
+        }     
+
+        // When loaded, set selected to first option, set all seats to blue, then change color of available seats
+        window.onload = function(){
+
+            // Set selected to first option
+            document.getElementById("selfli").value = "1";
+            
+            // Set all seats to blue
+            setBlue();
+            
+            // Set index to zero
+            ind = 0;
+            
+            // Iterate for available seats
+            while(a_seats[ind]){
+
+                // Get html element
+                seat_id = document.getElementById(String(a_seats[ind]));
+
+                // Set color to gray
+                seat_id.style.backgroundColor = "#dadada";
+
+                // Increment index
+                ind++;
+            }
+        }        
+        
+        // Change seat color when option is changed
+        function changeChoice(choices){
+
+            // Get value of selected index
+            ind_sel = choices.options[choices.selectedIndex].value;         
+
+            // First option
+            if(ind_sel == "1"){
+
+                // Set all seats to blue
+                setBlue();
+
+                // Set index to zero
+                ind = 0;
+                
+                // Set available seats to gray
+                while(a_seats[ind]){
+                    seat_id = document.getElementById(String(a_seats[ind]));
+                    seat_id.style.backgroundColor = "#dadada";
+                    ind++;
+                }
+            }
+
+            // Second option
+            if(ind_sel == "2"){
+
+                // Set all seats to blue
+                setBlue();
+
+                // Set index to zero
+                ind = 0;
+
+                // Set available seats to gray
+                while(b_seats[ind]){
+                    seat_id = document.getElementById(String(b_seats[ind]));
+                    seat_id.style.backgroundColor = "#dadada";
+                    ind++;
+                }
+            }
+
+            // Third option
+            if(ind_sel == "3"){
+
+                // Set all seats to blue
+                setBlue();
+
+                // Set index to zero
+                ind = 0;
+
+                // Set available seats to gray
+                while(c_seats[ind]){
+                    seat_id = document.getElementById(String(c_seats[ind]));
+                    seat_id.style.backgroundColor = "#dadada";
+                    ind++;
+                }
+            }
+ 
+            // Fourth option
+            if(ind_sel == "4"){
+
+                // Set all seats to blue
+                setBlue();
+
+                // Set index to zero
+                ind = 0;
+
+                // Set available seats to gray
+                while(d_seats[ind]){
+                    seat_id = document.getElementById(String(d_seats[ind]));
+                    seat_id.style.backgroundColor = "#dadada";
+                    ind++;
+                }
+            }
+
+            // Fifth option
+            if(ind_sel == "5"){
+
+                // Set all seats to blue
+                setBlue();
+
+                // Set index to zero
+                ind = 0;
+
+                // Set available seats to gray
+                while(e_seats[ind]){
+                    seat_id = document.getElementById(String(e_seats[ind]));
+                    seat_id.style.backgroundColor = "#dadada";
+                    ind++;
+                }
+            }
+
+            // Sixth option
+            if(ind_sel == "6"){
+
+                // Set all seats to blue
+                setBlue();
+
+                // Set index to zero
+                ind = 0;
+
+                // Set available seats to gray
+                while(f_seats[ind]){
+                    seat_id = document.getElementById(String(f_seats[ind]));
+                    seat_id.style.backgroundColor = "#dadada";
+                    ind++;
+                }
+            }
+        }
+
+    </script>
 
 {% endblock content %}
