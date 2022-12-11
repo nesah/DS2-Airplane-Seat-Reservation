@@ -1,12 +1,20 @@
 # Import libraries
 from flask import Flask, request, render_template, redirect, flash, url_for, session
+import webview
 import jinja2
+import sys
+import os
+import threading
+
+#lifesaver line - delete == shit wont work
+sys.stdout = sys.stderr = open(os.devnull, 'w')
 
 # Setup jinja
 jinja = jinja2.Environment(loader=jinja2.FileSystemLoader("template"))
 
 # Make app
 app = Flask(__name__)
+debug = False
 
 # Create secret key for flash messages
 app.secret_key = "72882373811"
@@ -100,6 +108,9 @@ def index():
     # Render page and send flights schedules list, seat ids, and seats per flight
     return render_template("flights_layout.html", flights_schedules=flights_schedules, seat_id=seat_id, a=a, b=b, c=c, d=d, e=e, f=f)
 
+def start_server():
+    app.run(host='0.0.0.0', port=80)
+
 # Route for seats_layout.html
 @app.route("/seats", methods=["GET", "POST"])
 def seats():
@@ -187,3 +198,15 @@ def seats():
 
     # Render page and send seat list and flight schedule details
     return render_template("seats_layout.html", seats_list=seats_list, flig_sche=flig_sche)
+
+
+#makes the app run only in main even if run anywhere else
+if __name__ == '__main__':
+
+    t = threading.Thread(target=start_server)
+    t.daemon = True
+    t.start()
+
+    webview.create_window("EVERECO", "http://localhost/")
+    webview.start()
+    sys.exit()
