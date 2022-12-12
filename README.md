@@ -13,6 +13,7 @@ Created using HTML, CSS, JavaScript, Python, and Flask Framework.
 - Delos Reyes, Shane - [Nesah10101](https://github.com/nesah)
 - Magnampo, Rosel - [rosieemj](https://github.com/rosieemj)
 - Mendoza, Rhabi - [rdmndz](https://github.com/rdmndz)
+- Rico, Samantha Neil - [Rieil](https://github.com/Rieil)
 - Rivera, Trica -  [triciamaerivera](https://github.com/triciamaerivera)
 
 ## References
